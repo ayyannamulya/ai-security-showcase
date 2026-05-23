@@ -4,7 +4,7 @@
 
 ---
 
-> ⚠️ **Disclaimer**: All projects in this repository are for **educational and research purposes only**. All attack simulations are conducted in controlled, isolated environments. No real systems, users, or data were targeted or harmed.
+> ⚠️ **Disclaimer**: All projects in this repository are for **research purposes**. All attack simulations are conducted in controlled, isolated environments. No real systems, users, or data were targeted or harmed.
 
 ---
 
