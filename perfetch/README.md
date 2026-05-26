@@ -4,7 +4,16 @@
 ![Type](https://img.shields.io/badge/Type-Red%20Team-red?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen?style=flat-square)
 
-# Perfetch
+# Perfetch - Next.js Middleware CVE Scanner
+
+![Python](https://shieldcn.dev/badge/Python%203.12-3776AB.svg?logo=python&logoColor=white&color=3776AB)
+![Next.js](https://shieldcn.dev/badge/Next.js-000000.svg?logo=nextdotjs&logoColor=white&color=000000)
+![Groq](https://shieldcn.dev/badge/Groq%20LLaMA%203-F55036.svg?logo=groq&logoColor=white&color=F55036)
+![httpx](https://shieldcn.dev/badge/httpx-009688.svg?logo=python&logoColor=white&color=009688)
+![websockets](https://shieldcn.dev/badge/websockets-4A90D9.svg?logo=websocket&logoColor=white&color=4A90D9)
+![Jinja2](https://shieldcn.dev/badge/Jinja2-B41717.svg?logo=jinja&logoColor=white&color=B41717)
+![pytest](https://shieldcn.dev/badge/pytest-0A9EDC.svg?logo=pytest&logoColor=white&color=0A9EDC)
+![uv](https://shieldcn.dev/badge/uv-DE5FE9.svg?logo=uv&logoColor=white&color=DE5FE9)
 
 </div>
 > Next.js middleware security scanner — detects CVE exposures that WAF cannot block.
