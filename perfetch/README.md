@@ -299,7 +299,3 @@ Every probe module has a dedicated test suite using `respx` to mock HTTP respons
 - [MITRE ATLAS](https://atlas.mitre.org/)
 
 ---
-
-<p align="center">
-  <sub>built by a security engineer who also writes Next.js — because that overlap is exactly why this tool exists</sub>
-</p>
