@@ -26,7 +26,7 @@ Named after the segment-prefetch attack vector (`GHSA-267c-6grr-h53f`). Built in
 
 ---
 
-## 🧨 the problem
+## 🧨 Problem
 
 The May 2026 Next.js security release patched 13 advisories covering middleware bypass, SSRF, cache poisoning, and XSS. Cloudflare's WAF response documented four of these as having **no viable network-layer mitigation** — no WAF rule can safely block them without breaking application behavior. The only fix is patching, and the only way to know if you're exposed before patching is to test.
 
@@ -36,7 +36,7 @@ perfetch reads your project's own middleware configuration and generates targete
 
 ---
 
-## 🎯 what it detects
+## 🎯 What it detects
 
 Four advisories with confirmed zero WAF coverage, sourced directly from the Cloudflare and Vercel advisories:
 
@@ -52,7 +52,7 @@ Four advisories with confirmed zero WAF coverage, sourced directly from the Clou
 
 ---
 
-## ⚙️ how it works
+## ⚙️ How it works
 
 Three layers run sequentially. No layer starts until the previous one completes.
 
@@ -89,7 +89,7 @@ Three layers run sequentially. No layer starts until the previous one completes.
 └─────────────────────────────────────────────────────────┘
 ```
 
-### 🔍 static analysis — reads your codebase, not a generic template
+### 🔍 Static Analysis — reads your codebase, not a generic template
 
 perfetch reads your actual `middleware.ts` matcher configuration and builds a map of protected routes before firing a single probe. If your middleware protects `/dashboard/:path*` and `/admin/:path*`, those are the exact paths that get tested — not a generic wordlist.
 
@@ -97,7 +97,8 @@ i18n configuration is read from `next.config.js`. If your app uses `defaultLocal
 
 WebSocket upgrade handling is detected from middleware patterns. If no WS routes are found, `GHSA-c4j6` is marked not applicable automatically.
 
-### 🤖 probe agent — adaptive, not a payload list
+
+### 🤖 Probe Agent — adaptive, not a payload list
 
 Each CVE module knows its own attack mechanics:
 
@@ -109,7 +110,7 @@ Each CVE module knows its own attack mechanics:
 
 **GHSA-c4j6** sends WebSocket upgrade requests with manipulated `Host` and `X-Forwarded-Host` headers targeting cloud metadata endpoints and internal IP ranges. Detects SSRF surface at the protocol upgrade layer.
 
-### 🧠 agent interpretation — LLM handles the ambiguous cases
+### 🧠 Agent Interpretation — LLM handles the ambiguous cases
 
 HTTP response heuristics handle the clear cases: `401`/`403` is not a bypass, `302` to `/login` is not a bypass. The Groq agent (`llama3-70b-8192`) is called only when the verdict is uncertain — a `200` that might be a login form rendered at the protected URL, or an RSC payload that might be an empty unauthenticated shell.
 
@@ -117,7 +118,7 @@ The agent also generates the executive summary and per-CVE remediation guidance 
 
 ---
 
-## 🏗️ architecture flow
+## 🏗️ Architecture Flow
 
 How every piece of the stack connects — from your codebase on disk to the final report.
 
@@ -170,7 +171,7 @@ flowchart TD
 
 ---
 
-## 📊 output
+## 📊 Output
 
 ### terminal
 
@@ -243,7 +244,7 @@ Exit code `1` on confirmed vulnerabilities — integrates directly as a fail-on-
 
 ---
 
-## 🔬 why this is different from a generic scanner
+## 🔬 Why this is different from a generic scanner
 
 Most security scanners treat web applications as black boxes. They fire a fixed payload list, parse responses, and move on. perfetch works differently across every layer.
 
@@ -257,7 +258,7 @@ Most security scanners treat web applications as black boxes. They fire a fixed 
 
 ---
 
-## 🧪 test coverage
+## 🧪 Test coverage
 
 Every probe module has a dedicated test suite using `respx` to mock HTTP responses — no live server required. Tests cover:
 
@@ -269,7 +270,7 @@ Every probe module has a dedicated test suite using `respx` to mock HTTP respons
 
 ---
 
-## 🚧 scope and known limitations
+## 🚧 Scope and known limitations
 
 **in scope**
 
@@ -287,7 +288,7 @@ Every probe module has a dedicated test suite using `respx` to mock HTTP respons
 
 ---
 
-## 📎 references
+## 📎 References
 
 - [Vercel — Next.js May 2026 Security Release](https://vercel.com/changelog/next-js-may-2026-security-release)
 - [Cloudflare — React/Next.js Vulnerability WAF Response](https://developers.cloudflare.com/changelog/post/2026-05-06-react-nextjs-vulnerabilities/)
