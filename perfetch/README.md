@@ -1,10 +1,9 @@
-
 <div align="center">
 
 ![Type](https://img.shields.io/badge/Type-Red%20Team-red?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen?style=flat-square)
 
-# Perfetch - Next.js Middleware CVE Scanner
+# PERFETCH - NEXT.JS Middleware CVE Scanner
 
 ### *Agentic security scanner that detects four Next.js middleware bypass CVEs (May 2026) that Cloudflare explicitly documented as impossible to mitigate at the WAF layer.*
 
