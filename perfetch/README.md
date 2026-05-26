@@ -18,9 +18,7 @@
 
 </div>
 
-
-Named after the segment-prefetch attack vector (`GHSA-267c-6grr-h53f`). Built in response to the [May 2026 Next.js coordinated security release](https://vercel.com/changelog/next-js-may-2026-security-release), which disclosed 13 advisories — four of which Cloudflare explicitly documented as impossible to mitigate at the WAF layer.
-
+*Named after the segment-prefetch attack vector (`GHSA-267c-6grr-h53f`). Built in response to the [May 2026 Next.js coordinated security release](https://vercel.com/changelog/next-js-may-2026-security-release), which disclosed 13 advisories — four of which Cloudflare explicitly documented as impossible to mitigate at the WAF layer.*
 
 ---
 
