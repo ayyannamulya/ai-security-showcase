@@ -85,7 +85,7 @@ Three layers run sequentially. No layer starts until the previous one completes.
 └─────────────────────────────────────────────────────────┘
 ```
 
-### 🔍 Static Analysis — reads your codebase, not a generic template
+### 🔍 Static Analysis — Reads your codebase, not a generic template
 
 perfetch reads your actual `middleware.ts` matcher configuration and builds a map of protected routes before firing a single probe. If your middleware protects `/dashboard/:path*` and `/admin/:path*`, those are the exact paths that get tested — not a generic wordlist.
 
@@ -94,7 +94,7 @@ i18n configuration is read from `next.config.js`. If your app uses `defaultLocal
 WebSocket upgrade handling is detected from middleware patterns. If no WS routes are found, `GHSA-c4j6` is marked not applicable automatically.
 
 
-### 🤖 Probe Agent — adaptive, not a payload list
+### 🤖 Probe Agent — Adaptive, not a payload list
 
 Each CVE module knows its own attack mechanics:
 
@@ -188,7 +188,7 @@ findings
  GHSA-c4j6-fc7j-m34r  High      WebSocket upgrade SSRF                   — N/A
 ```
 
-### markdown report (excerpt)
+### Markdown report (excerpt)
 
 ```markdown
 ## GHSA-267c-6grr-h53f
@@ -216,7 +216,7 @@ content-type: text/x-component
 **remediation:** Upgrade to Next.js 15.5.18 or 16.2.6.
 ```
 
-### JSON output
+### JSON Output
 
 ```json
 {
@@ -268,14 +268,14 @@ Every probe module has a dedicated test suite using `respx` to mock HTTP respons
 
 ## 🚧 Scope and known limitations
 
-**in scope**
+**In Scope**
 
 - Next.js 13.x, 14.x, 15.x, 16.x projects
 - App Router and Pages Router
 - Projects using `middleware.ts` or `middleware.js` for auth
 - i18n-configured projects using `next.config.js`
 
-**known limitations**
+**Known Limitations**
 
 - Middleware parser uses regex heuristics — computed matcher arrays or dynamic spread syntax may not parse fully. Complex matchers are flagged in output with a note to review manually.
 - WebSocket SSRF (`GHSA-c4j6`) blind confirmation requires a DNS callback server. The probe detects the attack surface and protocol-level signals; out-of-band confirmation is a documented gap.
