@@ -169,7 +169,7 @@ flowchart TD
 
 ## 📊 Output
 
-### terminal
+### Terminal
 
 ```
 ╭─────────────────────────────────────────────────────╮
@@ -266,7 +266,7 @@ Every probe module has a dedicated test suite using `respx` to mock HTTP respons
 
 ---
 
-## 🚧 Scope and known limitations
+## 🚧 Scope and Known Limitations
 
 **In Scope**
 
