@@ -6,6 +6,8 @@
 
 # Perfetch - Next.js Middleware CVE Scanner
 
+### *Agentic security scanner that detects four Next.js middleware bypass CVEs (May 2026) that Cloudflare explicitly documented as impossible to mitigate at the WAF layer.*
+
 ![Python](https://shieldcn.dev/badge/Python%203.12-3776AB.svg?logo=python&logoColor=white&color=3776AB)
 ![Next.js](https://shieldcn.dev/badge/Next.js-000000.svg?logo=nextdotjs&logoColor=white&color=000000)
 ![Groq](https://shieldcn.dev/badge/Groq%20LLaMA%203-F55036.svg?logo=groq&logoColor=white&color=F55036)
