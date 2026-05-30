@@ -36,26 +36,19 @@ perfetch is an agentic security scanner that detects Next.js middleware CVE expo
 
 ## Standards Selection
 
-| Standard | Applies | Reason |
-|---|---|---|
-| NIST AI RMF | ✅ | Universal governance anchor — agent reasoning and verdict generation |
-| EU AI Act | ❌ | Not EU-facing, not high-risk classification |
-| ISO/IEC 42001 | ❌ | Not a regulated sector |
-| MITRE ATLAS | ✅ | Agentic pipeline — Groq agent interprets external HTTP responses |
-| OWASP LLM Top 10 | ✅ | LLM agent processes untrusted HTTP response content from target server |
-| OWASP ML Security Top 10 | ❌ | No classical ML model |
-| BIML 78-Item Risk Analysis | ❌ | No classical ML model |
-| NIST SP 800-53 | ❌ | Not US Federal |
-| NIST SP 800-137 | ✅ | Continuous monitoring — CVE feed for scanner dependencies |
-| SLSA | ✅ | Supply chain — Groq model provenance, pypi dependency integrity |
-| CycloneDX / SPDX SBOM | ✅ | External dependencies: httpx, groq, websockets, jinja2, rich |
-| CVE feed | ✅ | Versioned dependencies in pyproject.toml |
-| CWE | ✅ | Weakness classification for all findings |
-| CVSS (AI-adapted) | ✅ | Risk scoring with AI modifier factors |
-| AVID | ✅ | Cross-reference known AI vulns — prompt injection via HTTP response |
-| STRIDE | ✅ | Threat modeling per component |
-| HIPAA | ❌ | Not healthcare sector |
-| PCI-DSS / SOC 2 | ❌ | Not finance sector |
+| Standard | Reason |
+|---|---|
+| NIST AI RMF | Universal governance anchor — agent reasoning and verdict generation |
+| MITRE ATLAS | Agentic pipeline — Groq agent interprets external HTTP responses |
+| OWASP LLM Top 10 | LLM agent processes untrusted HTTP response content from target server |
+| NIST SP 800-137 | Continuous monitoring — CVE feed for scanner dependencies |
+| SLSA | Supply chain — Groq model provenance, PyPI dependency integrity |
+| CycloneDX / SPDX SBOM | External dependencies: httpx, groq, websockets, jinja2, rich |
+| CVE feed | Versioned dependencies in pyproject.toml |
+| CWE | Weakness classification for all findings |
+| CVSS (AI-adapted) | Risk scoring with AI modifier factors |
+| AVID | Cross-reference known AI vulns — prompt injection via HTTP response |
+| STRIDE | Threat modeling per component |
 
 ---
 
@@ -335,4 +328,4 @@ perfetch v0.1.0 is acceptable for controlled internal use against developer-owne
 - [ ] New tool or MCP server added — any expansion of the agent's external surface
 - [x] New CVE disclosed against a dependency in prod — `httpx`, `groq`, `jinja2`, `websockets`, `rich`
 - [ ] Incident or near-miss involving AI component — Groq agent produces incorrect verdict in production scan
-- [ ] Regulatory change affecting system classification — if perfetch is deployed in a regulated sector context
+- [ ] Regulatory change affecting system classification — if perfetch is deployed in a regulated sector contextV
