@@ -1,90 +1,85 @@
-# 🔐 AI Security Showcase
+# 🕵️ AI Security Showcase
 
-> Hands-on research into AI security vulnerabilities — systematically implementing proof-of-concept projects based on the OWASP LLM Top 10, AI firewall design, and SIEM integration using Python and TypeScript.
+> I don't audit checklists. I build frameworks that force exploitable behavior 
+> to the surface — every finding traced to MITRE ATLAS, OWASP LLM Top 10, and CWE.
 
----
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://ayyanna-mulya.vercel.app)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/noviyartimulyadi)
 
-> ⚠️ **Disclaimer**: All projects in this repository are for **research purposes**. All attack simulations are conducted in controlled, isolated environments. No real systems, users, or data were targeted or harmed.
-
----
-
-## 🚀 Research Projects
-
-| # | Project | Security Category | Description | Stack | Status | Links |
-|---|---------|-------------------|-------------|-------|--------|-------|
-| 01 | **Prompt Injection Lab** | LLM01 - Prompt Injection | Proof-of-concept demonstrating direct and indirect prompt injection attacks on LLM-powered applications | Python • OpenAI API • FastAPI | ✅ Complete | [Repo](#) [Docs](#) |
-| 02 | **Insecure Output Handler** | LLM02 - Insecure Output Handling | Research into unsafe LLM output handling leading to XSS and code execution vulnerabilities | TypeScript • Next.js • Claude API | ✅ Complete | [Repo](#) [Docs](#) |
-| 03 | **Training Data Poisoning Sim** | LLM03 - Training Data Poisoning | Simulation of data poisoning attack vectors and their impact on model behavior | Python • Gemini API | ✅ Complete | [Repo](#) [Docs](#) |
-| 04 | **Model DoS Simulator** | LLM04 - Model Denial of Service | Stress-testing LLM endpoints to simulate resource exhaustion and denial of service scenarios | Python • TypeScript • OpenAI API | ✅ Complete | [Repo](#) [Docs](#) |
-| 05 | **Supply Chain Vulnerability Research** | LLM05 - Supply Chain Vulnerabilities | Research into third-party LLM plugin and dependency risks in AI pipelines | Python • TypeScript | ✅ Complete | [Repo](#) [Docs](#) |
-| 06 | **AI Firewall** | Defense Layer | Custom AI firewall for intercepting and filtering malicious LLM inputs before they reach the model | Python • TypeScript • Node.js | ✅ Complete | [Repo](#) [Docs](#) |
-| 07 | **SIEM Integration for AI Systems** | Monitoring & Detection | Real-time log analysis and security event monitoring for AI-powered applications using SIEM | Python • ELK Stack • Node.js | ✅ Complete | [Repo](#) [Docs](#) |
-| 08 | **Sensitive Info Disclosure Lab** | LLM06 - Sensitive Information Disclosure | Exploring how LLMs can inadvertently leak sensitive training data and PII | Python • OpenAI API | 🚧 In Progress | [Repo](#) [Docs](#) |
-| 09 | **Insecure Plugin Design Research** | LLM07 - Insecure Plugin Design | Research into vulnerabilities introduced by poorly designed LLM plugins and tool integrations | TypeScript • Claude API | 🚧 In Progress | [Repo](#) [Docs](#) |
-| 10 | **Integrated AI Security Pipeline** | Full Stack Defense | End-to-end AI security system combining firewall, SIEM monitoring, and OWASP LLM compliance checks | Python • TypeScript • OpenAI API • ELK Stack | 🚧 In Progress | [Repo](#) [Docs](#) |
+> ⚠️ All research runs in isolated, controlled environments. No real systems, users, or data were targeted or harmed.
 
 ---
 
-## 🧰 Tech Stack
+## 📊 At a Glance
 
-**Languages & Frameworks**
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
-
-**AI & LLM**
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)
-![Gemini](https://img.shields.io/badge/Gemini-8E75B2?style=flat-square&logo=googlegemini&logoColor=white)
-![Claude](https://img.shields.io/badge/Claude-CC785C?style=flat-square&logo=anthropic&logoColor=white)
-
-**Security & Monitoring**
-![Kali Linux](https://img.shields.io/badge/Kali_Linux-557C94?style=flat-square&logo=kalilinux&logoColor=white)
-![Burp Suite](https://img.shields.io/badge/Burp_Suite-FF6633?style=flat-square&logo=burpsuite&logoColor=white)
-![Wireshark](https://img.shields.io/badge/Wireshark-1679A7?style=flat-square&logo=wireshark&logoColor=white)
-![Elastic](https://img.shields.io/badge/ELK_Stack-005571?style=flat-square&logo=elastic&logoColor=white)
-![OWASP](https://img.shields.io/badge/OWASP-000000?style=flat-square&logo=owasp&logoColor=white)
+<table>
+<tr>
+<td align="center"><strong>2</strong><br/>Active Research</td>
+<td align="center"><strong>8</strong><br/>Planned</td>
+<td align="center"><strong>10</strong><br/>OWASP LLM Coverage</td>
+<td align="center"><strong>6</strong><br/>CWE Classifications</td>
+</tr>
+</table>
 
 ---
 
-## 🗺️ OWASP LLM Top 10 Research Coverage
+## ⚡ Active Research
 
-```
-LLM01 - Prompt Injection                ✅ Complete
-LLM02 - Insecure Output Handling        ✅ Complete
-LLM03 - Training Data Poisoning         ✅ Complete
-LLM04 - Model Denial of Service         ✅ Complete
-LLM05 - Supply Chain Vulnerabilities    ✅ Complete
-LLM06 - Sensitive Information Disclosure 🚧 In Progress
-LLM07 - Insecure Plugin Design          🚧 In Progress
-LLM08 - Excessive Agency               🚧 In Progress
-LLM09 - Overreliance                   🚧 In Progress
-LLM10 - Model Theft                    🚧 In Progress
-```
+| Project | Finding | Stack | Links |
+|---------|---------|-------|-------|
+| **[DelegaPwn](./delegapwn)** | Multi-agent delegation escalation — no single agent breaks policy, the chain does. `CWE-269` `CWE-284` | `Python` `CrewAI` `LangChain` | [README](./delegapwn/README.md) |
+| **[SecureWatch SIEM](./securewatch-siem)** | Real-time detection and log analysis layer for AI-powered attack surfaces | `Python` `ELK Stack` `Node.js` | [README](./securewatch-siem/README.md) |
 
 ---
 
-## 📁 Project Structure
+## 📋 Research Roadmap
 
-Each project folder contains:
+Systematic adversarial research across the full AI attack surface — every 
+finding classified and traced to industry frameworks.
 
-```
-project-name/
-├── README.md          # Research overview, attack methodology, and findings
-├── docs/              # Technical documentation and architecture diagrams
-├── poc/               # Proof-of-concept implementation
-└── defense/           # Mitigation strategies and defensive implementations
-```
+![OWASP LLM Top 10](https://img.shields.io/badge/OWASP-LLM_Top_10-000000?style=for-the-badge&logo=owasp&logoColor=white)
+![MITRE ATLAS](https://img.shields.io/badge/MITRE-ATLAS-CC0000?style=for-the-badge)
+![CWE](https://img.shields.io/badge/CWE-Weakness_Enumeration-FF6600?style=for-the-badge)
+![CVE](https://img.shields.io/badge/CVE-Vulnerability_Database-CC0000?style=for-the-badge)
+![NIST AI RMF](https://img.shields.io/badge/NIST-AI_RMF-003087?style=for-the-badge)
 
----
-
-## 📫 Connect
-
-- 🌐 Portfolio: [ayyannamulya.dev](https://ayyanna-mulya.vercel.app)
-- 💼 LinkedIn: [in/noviyartimulyadi](https://www.linkedin.com/in/noviyartimulyadi)
-- 📩 Email: [noviayya1121@gmail.com](noviayya1121@gmail.com)
+Coverage spans the full OWASP LLM Top 10 — from prompt injection and RAG 
+poisoning to model theft and supply chain compromise. Each research project 
+ships with a documented attack methodology, PoC implementation, CWE 
+classification, and defensive countermeasures. Not a checklist — a living 
+research surface that grows with the threat landscape.
 
 ---
 
-> ⭐ All projects are research implementations in isolated environments. Full source code is kept private. Documentation and code samples are provided to demonstrate research capabilities.
->
-> 🔒 No sensitive data, API keys, or credentials are included. All examples use mock data and sanitized configurations.
+## 🛠️ Stack
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
+![CrewAI](https://img.shields.io/badge/CrewAI-FF6B6B?style=for-the-badge&logo=crewai&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
+![Gemini](https://img.shields.io/badge/Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white)
+![Claude](https://img.shields.io/badge/Claude-CC785C?style=for-the-badge&logo=anthropic&logoColor=white)
+![Garak](https://img.shields.io/badge/Garak-FF0000?style=for-the-badge&logo=python&logoColor=white)
+![Kali Linux](https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kalilinux&logoColor=white)
+![Burp Suite](https://img.shields.io/badge/Burp_Suite-FF6633?style=for-the-badge&logo=burpsuite&logoColor=white)
+![Wireshark](https://img.shields.io/badge/Wireshark-1679A7?style=for-the-badge&logo=wireshark&logoColor=white)
+![ELK Stack](https://img.shields.io/badge/ELK_Stack-005571?style=for-the-badge&logo=elastic&logoColor=white)
+![OWASP](https://img.shields.io/badge/OWASP-000000?style=for-the-badge&logo=owasp&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+
+---
+
+## 📁 Structure
+
+Each active project ships with:
+
+`README.md` — research overview, attack methodology, findings  
+`/poc` — proof-of-concept implementation  
+`/defense` — mitigations and defensive implementations  
+`/docs` — architecture, threat model, CWE mapping
+
+---
+
+> 🔒 Showcase versions only. No API keys or credentials included. All examples use sanitized configurations.
