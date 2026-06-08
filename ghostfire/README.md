@@ -5,7 +5,7 @@
 
 # Ghostwire — Attacking the AI Control Plane
 
-### *Zero Trust AI red team harness that attacks the control plane of LangGraph agentic pipelines — not the model — and measures ZT control bypass rates empirically across structured attack campaigns.*
+### *Zero Trust AI red team harness that attacks the control plane of LangGraph agentic pipelines, not the model and measures ZT control bypass rates empirically across structured attack campaigns.*
 
 ![badge](https://shieldcn.dev/badge/Python-3776AB.svg?logo=python&color=3776AB)
 ![badge](https://shieldcn.dev/badge/LangGraph-22C55E.svg?logo=langchain&color=166534)
@@ -211,12 +211,7 @@ ghostwire/
 │   ├── payloads/                   20 ATLAS-mapped payloads, loader
 │   └── reports/                    scoring, Langfuse export, terminal report
 ├── tests/                          56 tests across unit / integration / adversarial
-├── docs/
-│   ├── threat_model.md
-│   ├── architecture.md
-│   └── phases/                     phase 1–7 implementation docs
-└── scripts/
-    └── run_eval.py                 entry point — --phase 1..7, --env, --modules
+
 ```
 
 ---
