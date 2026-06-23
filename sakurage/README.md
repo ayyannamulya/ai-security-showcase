@@ -13,6 +13,8 @@
 ![LangGraph](https://shieldcn.dev/badge/LangGraph-1C3C3C.svg?logo=langchain&logoColor=white&color=1C3C3C)
 ![Pydantic](https://shieldcn.dev/badge/Pydantic-E92063.svg?logo=pydantic&logoColor=white&color=E92063)
 ![Jinja2](https://shieldcn.dev/badge/Jinja2-B41717.svg?logo=jinja&logoColor=white&color=B41717)
+![HuggingFace](https://shieldcn.dev/badge/HuggingFace-FFD21E.svg?logo=huggingface&logoColor=black&color=FFD21E)
+![Rich](https://shieldcn.dev/badge/Rich-FAE042.svg?logo=python&logoColor=black&color=FAE042)
 ![pytest](https://shieldcn.dev/badge/pytest-0A9EDC.svg?logo=pytest&logoColor=white&color=009FE3)
 ![uv](https://shieldcn.dev/badge/uv-DE5FE9.svg?logo=astral&logoColor=white&color=261230)
 
