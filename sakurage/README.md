@@ -117,9 +117,3 @@ uv run pytest tests/test_pipeline_e2e.py
 - Delta computation uses the first safetensors shard only on sharded models — anomalous signal in non-first shards will be missed
 - Probe inference is CPU-only; large base models will be slow
 - Probe-evasion is a real attack class: an adapter tuned to recognize probe-like phrasing will suppress backdoor behavior during evaluation; delta analysis provides an independent signal for this case but is not a complete countermeasure
-
----
-
-## License
-
-MIT
