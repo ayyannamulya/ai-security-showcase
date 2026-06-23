@@ -1,6 +1,6 @@
 <div align="center">
 
-![Type](https://img.shields.io/badge/Type-Security%20Research-red?style=flat-square)
+![Type](https://img.shields.io/badge/Type-Red%20Team-red?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
 
 # sakurakage 桜影
