@@ -3,7 +3,7 @@
 ![Type](https://img.shields.io/badge/Type-Red%20Team-red?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
 
-# sakurakage 桜影
+# Sakurakage - Behavioral Backdoor Auditor
 
 ### *Behavioral backdoor auditor for HuggingFace LoRA adapters — weight-delta analysis + Claude-generated probing + ATLAS × STRIDE threat model output.*
 
